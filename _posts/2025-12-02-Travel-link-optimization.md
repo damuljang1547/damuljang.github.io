@@ -13,7 +13,7 @@ last_modified_at: 2025-12-02
 
 ## 1. 프로젝트 개요
 * **서비스명:** Travel Link (AI 기반 여행 계획 공유 플랫폼)
-* **기간:** 2025.09 ~ 2025.12
+* **기간:** 2025.03 ~ 2025.12
 * **기술 스택:** Python FastAPI, SQLAlchemy, **MySQL 8.0**, AWS RDS
 * **나의 역할:** Database Architect & Backend Developer
 

@@ -1,5 +1,5 @@
 ---
-title: "이커머스 주문 시스템 DB 모델링 및 쿼리 튜닝"
+title: "AI 여행 계획 플랫폼 TL(Travel Link) DB 설계 및 동시성 제어"
 excerpt: "대용량 주문 처리를 위한 MySQL 설계 및 Slow Query 개선 사례"
 categories:
   - Project

@@ -11,10 +11,10 @@ last_modified_at: 2024-12-02
 ---
 
 ## 1. 프로젝트 개요
-* **주제:** 온라인 쇼핑몰 주문/결제 시스템 DB 구축
+* **주제:** AI기반 여행지 추천 및 계획 작성,공유,참여 /결제 시스템 DB 구축
 * **기간:** 2024.11 ~ 2024.12
-* **역할:** Database Engineer (기여도 100%)
-* **사용 기술:** MySQL 8.0, AWS RDS, Python (Data Generator)
+* **역할:** Database Engineer, Backend, Frontend (기여도 50%)
+* **사용 기술:** MySQL 8.0, AWS RDS, Python, React
 
 ## 2. ERD 설계 (데이터 모델링)
 > 비즈니스 로직을 반영하여 제3정규형을 준수하되, 조회 성능을 위해 주문 이력 테이블은 반정규화를 수행했습니다.

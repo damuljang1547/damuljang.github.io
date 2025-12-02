@@ -11,7 +11,7 @@ last_modified_at: 2024-12-02
 ---
 
 ## 1. 프로젝트 개요
-* **주제:** AI기반 여행지 추천 및 계획 작성,공유,참여 /결제 시스템 DB 구축
+* **주제:** AI기반 여행지 추천 및 계획 작성,공유,참여 /회원가입, 계획 공유, 계획 참여, 계획 저장 DB 구축 및 Frontend, Backend 구성 
 * **기간:** 2024.11 ~ 2024.12
 * **역할:** Database Engineer, Backend, Frontend (기여도 50%)
 * **사용 기술:** MySQL 8.0, AWS RDS, Python, React

@@ -49,7 +49,6 @@ Travel Link는 신뢰 기반의 동행 모집 플랫폼이므로, **"인증된 �
 사용자(User)를 중심으로 여행 계획(Plan)이 생성되고, 이에 대한 참여 신청(Application)과 확정(Participant)이 이루어지는 흐름을 시각화했습니다.
 
 ![Travel Link ERD](/assets/TL-ERD.png)
-*(클릭하면 원본 크기로 확인할 수 있습니다)*
 
 ---
 

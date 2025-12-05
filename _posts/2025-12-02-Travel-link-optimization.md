@@ -11,9 +11,29 @@ tags:
 last_modified_at: 2025-12-02
 ---
 
-<div style="font-size: 0.9em;">
-
-### 1. 프로젝트 개요
+<style>
+  /* 본문 글자 크기 축소 및 줄간격 확보 */
+  .page__content p, .page__content li, .page__content td {
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+  }
+  
+  /* 제목 크기 대폭 축소 및 디자인 변경 */
+  .page__content h1 { font-size: 24px !important; margin-bottom: 20px !important; }
+  .page__content h2 { 
+    font-size: 20px !important; 
+    border-bottom: 1px solid #666; 
+    padding-bottom: 10px; 
+    margin-top: 40px !important;
+    color: #5ab2ff !important; /* 포인트 컬러 (하늘색) */
+  }
+  .page__content h3 { font-size: 18px !important; margin-top: 30px !important; color: #fff !important; }
+  .page__content h4 { font-size: 16px !important; margin-top: 20px !important; color: #ddd !important; }
+  
+  /* 코드 블럭 글자 크기 조절 */
+  .page__content pre, .page__content code { font-size: 13px !important; }
+</style>
+## 1. 프로젝트 개요
 * **서비스명:** Travel Link (AI 기반 여행 계획 공유 플랫폼)
 * **기간:** 2025.03 ~ 2025.12
 * **기술 스택:** Python FastAPI, SQLAlchemy, **MySQL 8.0**, AWS RDS
@@ -21,9 +41,9 @@ last_modified_at: 2025-12-02
 
 ---
 
-### 2. 요구사항 분석 및 데이터 모델링
+## 2. 요구사항 분석 및 데이터 모델링
 
-#### 2.1 비즈니스 요구사항과 데이터 설계
+### 2.1 비즈니스 요구사항과 데이터 설계
 Travel Link는 신뢰 기반의 동행 모집 플랫폼이므로, **"인증된 사용자"**와 **"데이터 무결성"**을 최우선으로 고려하여 요구사항을 도출했습니다.
 
 | 도메인 | 요구사항 (Business Logic) | DB 설계 반영 (Data Strategy) |
@@ -35,7 +55,7 @@ Travel Link는 신뢰 기반의 동행 모집 플랫폼이므로, **"인증된 �
 > **💡 설계 의도: 데이터 품질 확보**
 > 익명 게시판이 아닌, 실제 만남이 이루어지는 서비스입니다. 따라서 **모든 테이블에 유저 식별자(FK)를 필수 조건으로 설정**하여, 데이터의 소유권을 명확히 하고 추후 발생할 수 있는 악성 유저 이슈에 대비했습니다.
 
-#### 2.2 Entity Relationship Diagram (ERD)
+### 2.2 Entity Relationship Diagram (ERD)
 사용자(User)를 중심으로 여행 계획(Plan)이 생성되고, 이에 대한 참여 신청(Application)과 확정(Participant)이 이루어지는 흐름을 시각화했습니다.
 
 ![Travel Link ERD](/assets/TL-ERD.png)
@@ -43,9 +63,9 @@ Travel Link는 신뢰 기반의 동행 모집 플랫폼이므로, **"인증된 �
 
 ---
 
-### 3. 핵심 아키텍처 및 DB 설계
+## 3. 핵심 아키텍처 및 DB 설계
 
-#### 3.1 AI 비정형 데이터를 위한 Hybrid 설계 (RDBMS + JSON)
+### 3.1 AI 비정형 데이터를 위한 Hybrid 설계 (RDBMS + JSON)
 여행 계획(`itinerary`)은 AI(Gemini)가 생성하므로, 여행 일수와 방문지 개수가 매번 달라지는 가변적인 계층 구조(Date -> Time -> Activity)를 가집니다.
 
 * **문제 (Problem):** 이를 정규화(Normalization)하여 `Plan_Days`, `Plan_Activities` 테이블로 쪼갤 경우, 상세 조회 시 수백 개의 Row를 `JOIN`해야 하므로 I/O 부하가 큼.

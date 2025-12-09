@@ -1,8 +1,7 @@
 ---
-title: "About Me"
-permalink: /about/
 layout: single
 author_profile: true
+permalink: /
 ---
 
 # 👋 안녕하세요, 데이터의 가치를 높이는 엔지니어 [본인이름]입니다.
